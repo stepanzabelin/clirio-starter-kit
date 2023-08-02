@@ -1,36 +1,24 @@
-import {
-  Module,
-  Command,
-  Options,
-  Empty,
-  Failure,
-  Hidden,
-  Params,
-} from 'clirio';
+import { Module, Command, Empty, Failure, Params } from 'clirio';
 import { injectable } from 'tsyringe';
 import { EmptyMathService } from './actions/empty-math';
 import { FailureMathService } from './actions/failure-math';
 import {
-  GetCityMathOptionsDto,
-  GetCityMathParamsDto,
-  GetCityMathService,
-} from './actions/get-city-math';
+  CalculateFormulaParamsDto,
+  CalculateFormulaService,
+} from './actions/calculate-formula';
 
 @injectable()
 @Module('math')
 export class MathModule {
   constructor(
-    private readonly getCityMathService: GetCityMathService,
+    private readonly calculateFormulaService: CalculateFormulaService,
     private readonly emptyMathService: EmptyMathService,
-    private readonly failureMathService: FailureMathService
+    private readonly failureMathService: FailureMathService,
   ) {}
 
   @Command('<formula>')
-  public run(
-    @Params() params: GetCityMathParamsDto,
-    @Options() options: GetCityMathOptionsDto
-  ) {
-    this.getCityMathService.entry(params, options);
+  public run(@Params() params: CalculateFormulaParamsDto) {
+    this.calculateFormulaService.entry(params);
   }
 
   @Empty()

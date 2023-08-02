@@ -8,12 +8,12 @@ import { ResultService } from '../../../../services';
 export class GetCityWeatherService {
   constructor(
     private readonly weatherApiService: WeatherApiService,
-    private readonly resultService: ResultService
+    private readonly resultService: ResultService,
   ) {}
 
   public async entry(
     params: GetCityWeatherParamsDto,
-    options: GetCityWeatherOptionsDto
+    options: GetCityWeatherOptionsDto,
   ) {
     const result = await this.weatherApiService.getWeather(params.city);
 

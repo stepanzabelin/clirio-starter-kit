@@ -22,7 +22,10 @@
     "sandboxed",
     "transpiled",
     "typedoc",
-    "untracked"
+    "untracked",
+    "tsyringe",
+    "paramtypes",
+    "returntype"
   ],
   "flagWords": [],
   "ignorePaths": [

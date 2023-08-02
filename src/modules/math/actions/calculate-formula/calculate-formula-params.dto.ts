@@ -1,6 +1,6 @@
 import { Param } from 'clirio';
 
-export class GetCityMathParamsDto {
+export class CalculateFormulaParamsDto {
   @Param('formula')
   readonly formula!: string;
 }
