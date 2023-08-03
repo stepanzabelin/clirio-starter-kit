@@ -6,6 +6,6 @@ export class FailureMathService {
   constructor(private readonly resultService: ResultService) {}
 
   public entry() {
-    this.resultService.note('There is no such a command. Type --help');
+    this.resultService.warn('There is no such a command. Type --help');
   }
 }

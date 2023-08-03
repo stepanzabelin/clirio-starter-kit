@@ -6,6 +6,6 @@ export class FailureWeatherService {
   constructor(private readonly resultService: ResultService) {}
 
   public entry() {
-    this.resultService.note('There is no such a command!');
+    this.resultService.warn('There is no such a command!');
   }
 }

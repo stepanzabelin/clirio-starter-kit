@@ -6,6 +6,6 @@ export class EmptyMathService {
   constructor(private readonly resultService: ResultService) {}
 
   public entry() {
-    this.resultService.note('The command is incomplete. Type --help');
+    this.resultService.warn('The command is incomplete. Type --help');
   }
 }
