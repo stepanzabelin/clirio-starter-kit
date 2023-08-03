@@ -1,5 +1,11 @@
+import { injectable } from 'tsyringe';
+import { ResultService } from '../../../../services';
+
+@injectable()
 export class EmptyMathService {
+  constructor(private readonly resultService: ResultService) {}
+
   public entry() {
-    console.log('Empty!');
+    this.resultService.note('The command is incomplete. Type --help');
   }
 }

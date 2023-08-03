@@ -5,7 +5,28 @@ import chalk from 'chalk';
 export class ResultService {
   constructor() {}
 
-  public result(text: string, value: any) {
-    console.log(chalk.cyan(text + ':'), chalk.green(value));
+  public error(message: string) {
+    // eslint-disable-next-line no-console
+    console.log(chalk.red(message));
+  }
+
+  public warn(message: string) {
+    // eslint-disable-next-line no-console
+    console.log(chalk.yellow(message));
+  }
+
+  public note(message: string) {
+    // eslint-disable-next-line no-console
+    console.log(chalk.gray(message));
+  }
+
+  public answer(label: string, value: any) {
+    // eslint-disable-next-line no-console
+    console.log(chalk.cyan(label + ':'), chalk.green(value));
+  }
+
+  public result(label: string, value: any) {
+    // eslint-disable-next-line no-console
+    console.log(chalk.cyan(label + ':'), chalk.green(value));
   }
 }

@@ -17,6 +17,6 @@ export class GetCityWeatherService {
   ) {
     const result = await this.weatherApiService.getWeather(params.city);
 
-    this.resultService.result(`Weather in ${params.city}`, result);
+    this.resultService.answer(`Weather in ${params.city}`, result);
   }
 }
