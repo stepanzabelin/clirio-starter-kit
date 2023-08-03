@@ -1,10 +1,9 @@
-import { Module, Command, Options, Empty, Failure, Params } from 'clirio';
+import { Module, Command, Options, Empty, Failure } from 'clirio';
 import { injectable } from 'tsyringe';
 import { EmptyWeatherService } from './actions/empty-weather';
 import { FailureWeatherService } from './actions/failure-weather';
 import {
   GetCityWeatherOptionsDto,
-  GetCityWeatherParamsDto,
   GetCityWeatherService,
 } from './actions/get-city-weather';
 
@@ -17,12 +16,9 @@ export class WeatherModule {
     private readonly failureWeatherService: FailureWeatherService,
   ) {}
 
-  @Command('get <city>')
-  public run(
-    @Params() params: GetCityWeatherParamsDto,
-    @Options() options: GetCityWeatherOptionsDto,
-  ) {
-    this.getCityWeatherService.entry(params, options);
+  @Command('get')
+  public run(@Options() options: GetCityWeatherOptionsDto) {
+    this.getCityWeatherService.entry(options);
   }
 
   @Empty()
