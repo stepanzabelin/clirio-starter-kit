@@ -17,6 +17,7 @@ yarn build
 Test command lines
 
 ```bash
-$ yarn dev math "(2 + 5) ^ 2 - 7"
-$ yarn dev weather get Prague
+$ yarn dev math formula "(2 + 5) ^ 2 - 7"
+$ yarn dev math sum 5 10
+$ yarn dev weather get --city=Prague
 ```

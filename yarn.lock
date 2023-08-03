@@ -1583,10 +1583,10 @@ clear-module@^4.1.2:
     parent-module "^2.0.0"
     resolve-from "^5.0.0"
 
-clirio@clirio@1.0.0-alpha.1:
-  version "1.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/clirio/-/clirio-1.0.0-alpha.1.tgz#14404a233d8bf067e32fa58b6f2c765a41a4cc54"
-  integrity sha512-08Zt2OJ/YCwFFMUjdDXsTfV1+Tw4cdNiA92E9yUEqK7JvfKfkIm6Te0IUWeaeXf/UyGaJ0wdUV1jdmm8A1ZgeA==
+clirio@^1.0.0:
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/clirio/-/clirio-1.0.0-alpha.2.tgz#cd8761f33edf76f24abf1ec21676aa953225f232"
+  integrity sha512-T+KaSRRQg5aDvLzIDgy9Z8+rfgh8ng/zrYwexXjv/4biOHjxR70LQ5CNi0stYxDHYDE9S7LAqerZY0zwklCoCA==
   dependencies:
     reflect-metadata "^0.1.13"
 

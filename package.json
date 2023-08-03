@@ -60,7 +60,7 @@
     "@types/sinon": "^10.0.6",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
-    "clirio": "clirio@1.0.0-alpha.1",
+    "clirio": "^1.0.0",
     "cspell": "^6.31.1",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^6.11.0",
