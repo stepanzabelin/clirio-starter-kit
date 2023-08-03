@@ -24,4 +24,9 @@ export class ResultService {
     // eslint-disable-next-line no-console
     console.log(chalk.cyan(label + ':'), chalk.green(value));
   }
+
+  public log(message: string) {
+    // eslint-disable-next-line no-console
+    console.log(message);
+  }
 }

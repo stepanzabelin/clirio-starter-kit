@@ -8,7 +8,7 @@
   "repository": "git@github.com:stepanzabelin/clirio-starter-kit.git",
   "license": "MIT",
   "bin": {
-    "clirio-example": "./build/main/cli.js"
+    "my-cli": "./build/main/cli.js"
   },
   "keywords": [
     "cli",

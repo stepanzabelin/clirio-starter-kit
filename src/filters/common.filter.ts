@@ -13,7 +13,19 @@ export class CommonFilter implements ClirioFilter {
     }
 
     if (error instanceof ClirioCommonError) {
-      this.resultService.error(error.message);
+      let message;
+
+      switch (error.errCode) {
+        case 'INCORRECT_COMMAND':
+          message = 'Incorrect command specified. Type --help';
+          break;
+
+        default:
+          message = error.message;
+          break;
+      }
+
+      this.resultService.error(message);
       process.exit(5);
     }
 
