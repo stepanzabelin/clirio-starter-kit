@@ -1,4 +1,9 @@
-import { ClirioValidationError, ClirioPipe, PipeContext } from 'clirio';
+import {
+  ClirioValidationError,
+  ClirioPipe,
+  PipeContext,
+  ClirioHelper,
+} from 'clirio';
 import { getTypeSchema } from 'joi-class-decorators';
 
 export class CommonPipe implements ClirioPipe {
@@ -15,9 +20,9 @@ export class CommonPipe implements ClirioPipe {
     });
 
     if (error) {
-      const propertyName = error.details[0]?.context?.key;
+      // const propertyName = error.details[0]?.context?.key;
 
-      const row = input.rows.find((row) => row.propertyName === propertyName);
+      // const name = ClirioHelper.formatKeysFromPipeContext(input, propertyName);
 
       throw new ClirioValidationError(error.message, {
         dataType: input.dataType,
