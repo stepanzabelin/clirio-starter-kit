@@ -17,8 +17,7 @@ export const bootstrap = async () => {
   ]);
 
   cli.setGlobalPipe(CommonPipe);
-  cli.setGlobalPipe(CommonPipe);
-  cli.setGlobalFilter(CommonFilter);
+  cli.setGlobalFilter(container.resolve(CommonFilter));
 
   await cli.execute();
 };

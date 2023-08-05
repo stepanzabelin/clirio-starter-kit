@@ -23,7 +23,7 @@ export class MathModule {
     this.calculateFormulaService.entry(params);
   }
 
-  @Command('sum <first> <second>')
+  @Command('sum <first-argument> <second-argument>')
   public sum(@Params() params: SumMathParamsDto) {
     this.sumMathService.entry(params);
   }

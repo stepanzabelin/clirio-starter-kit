@@ -1,8 +1,10 @@
 import { ClirioCommonError, ClirioFilter, ClirioValidationError } from 'clirio';
+import { injectable } from 'tsyringe';
 import { ResultService } from '../services';
 
+@injectable()
 export class CommonFilter implements ClirioFilter {
-  private readonly resultService = new ResultService();
+  constructor(private readonly resultService: ResultService) {}
 
   catch(
     error: Error | ClirioCommonError | ClirioValidationError,
