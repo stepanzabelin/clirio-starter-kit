@@ -14,7 +14,7 @@ yarn build
 
 ## Run cli commands
 
-Test command lines
+Test command-lines
 
 ```bash
 $ yarn dev math formula "(2 + 5) ^ 2 - 7"

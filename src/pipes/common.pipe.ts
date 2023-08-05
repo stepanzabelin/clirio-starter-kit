@@ -5,8 +5,6 @@ export class CommonPipe implements ClirioPipe {
   transform(data: any, input: PipeContext): any | never {
     const schema = getTypeSchema(input.entity);
 
-    console.log(input);
-
     if (Object.keys(schema.describe().keys).length === 0) {
       return data;
     }

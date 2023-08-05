@@ -1,7 +1,7 @@
 {
   "name": "clirio-starter-kit",
   "version": "1.0.0",
-  "description": "Clirio is a mini framework for node.js command-line interfaces",
+  "description": "A TypeScript starter-kit for a node.js command-line application based on the Clirio framework",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
@@ -26,13 +26,13 @@
   "author": "Stepan Zabelin",
   "scripts": {
     "build": "run-p build:*",
-    "build:main": "tsc -p tsconfig.json",
+    "build:main": "tsc -p tsconfig.main.json",
     "build:module": "tsc -p tsconfig.module.json",
     "watch:build": "tsc -p tsconfig.json -w",
-    "fix:prettier": "prettier --write \"./src/**/*.ts\"",
-    "fix:eslint": "eslint ./src --ext .ts  -c .eslintrc-final.json --fix",
+    "fix:prettier": "prettier --write \"./{src,tests}/**/*.ts\"",
+    "fix:eslint": "eslint \"./src/**/*.ts\" \"./tests/**/*.ts\" -c .eslintrc-final.json --fix",
     "fix": "run-s fix:*",
-    "test:eslint": "eslint ./src --quiet -c .eslintrc-final.json",
+    "test:eslint": "eslint \"./src/**/*.ts\" \"./tests/**/*.ts\"  --quiet -c .eslintrc-final.json",
     "test:typescript": "tsc -p tsconfig.json --noEmit",
     "test:cspell": "cspell \"{./**/*.js,./**/*.ts}\" --no-progress",
     "test:unit": "jest --silent=false --bail",
@@ -44,7 +44,7 @@
     "dev": "ts-node -r tsconfig-paths/register src/cli.ts"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=12"
   },
   "dependencies": {
     "chalk": "^2.4.2",
@@ -87,18 +87,5 @@
     "CHANGELOG.md",
     "LICENSE",
     "README.md"
-  ],
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src",
-    "testRegex": ".spec.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "testEnvironment": "node"
-  }
+  ]
 }
