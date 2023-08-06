@@ -20,15 +20,24 @@ export class CommonPipe implements ClirioPipe {
     });
 
     if (error) {
-      const key = error.details[0]?.context?.key;
+      const propertyName = error.details[0]?.context?.key;
 
-      const propertyName =
-        (key && ClirioHelper.formatKeysFromPipeContext(input, key)) ||
-        'unknown';
+      const parameter =
+        propertyName &&
+        ClirioHelper.formatKeysFromPipeContext(input, propertyName);
 
-      throw new ClirioValidationError(error.message, {
+      let message = error.message;
+
+      if (parameter) {
+        message = message.replace(
+          `"${propertyName}"`,
+          `The "${parameter}" in ${input.dataType}`,
+        );
+      }
+
+      throw new ClirioValidationError(message, {
         dataType: input.dataType,
-        propertyName,
+        propertyName: propertyName ?? 'unknown',
       });
     }
 
