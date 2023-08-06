@@ -20,13 +20,15 @@ export class CommonPipe implements ClirioPipe {
     });
 
     if (error) {
-      // const propertyName = error.details[0]?.context?.key;
+      const key = error.details[0]?.context?.key;
 
-      // const name = ClirioHelper.formatKeysFromPipeContext(input, propertyName);
+      const propertyName =
+        (key && ClirioHelper.formatKeysFromPipeContext(input, key)) ||
+        'unknown';
 
       throw new ClirioValidationError(error.message, {
         dataType: input.dataType,
-        propertyName: error.details[0]?.context?.key ?? 'unknown',
+        propertyName,
       });
     }
 
