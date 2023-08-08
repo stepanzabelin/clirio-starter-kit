@@ -13,7 +13,7 @@ Clirio starter kit contains the recommended assembly. But it is possible to inte
 Pull this project from git and create your own repo
 
 ```bash
-$ git clone https://github.com/stepanzabelin/clirio-starter-kit my-cli-app
+$ git clone https://github.com/stepanzabelin/clirio-starter-kit.git my-cli-app
 $ cd my-cli-app
 $ rm -rf .git
 $ git init
