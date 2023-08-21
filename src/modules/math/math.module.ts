@@ -1,40 +1,40 @@
 import { Module, Command, Empty, Failure, Params } from 'clirio';
 import { injectable } from 'tsyringe';
-import { EmptyMathService } from './actions/empty-math';
-import { FailureMathService } from './actions/failure-math';
+import { MathEmptyCommandService } from './actions/math-empty';
+import { MathFailureService } from './actions/math-failure';
 import {
   CalculateFormulaParamsDto,
-  CalculateFormulaService,
+  CalculateFormulaCommandService,
 } from './actions/calculate-formula';
-import { SumMathParamsDto, SumMathService } from './actions/sum-math';
+import { SumMathParamsDto, SumMathCommandService } from './actions/sum-math';
 
 @injectable()
 @Module('math')
 export class MathModule {
   constructor(
-    private readonly calculateFormulaService: CalculateFormulaService,
-    private readonly emptyMathService: EmptyMathService,
-    private readonly failureMathService: FailureMathService,
-    private readonly sumMathService: SumMathService,
+    private readonly calculateFormulaCommandService: CalculateFormulaCommandService,
+    private readonly sumMathCommandService: SumMathCommandService,
+    private readonly mathEmptyCommandService: MathEmptyCommandService,
+    private readonly mathFailureService: MathFailureService,
   ) {}
 
   @Command('formula <formula>')
   public formula(@Params() params: CalculateFormulaParamsDto) {
-    this.calculateFormulaService.entry(params);
+    this.calculateFormulaCommandService.entry(params);
   }
 
   @Command('sum <first-argument> <second-argument>')
   public sum(@Params() params: SumMathParamsDto) {
-    this.sumMathService.entry(params);
+    this.sumMathCommandService.entry(params);
   }
 
   @Empty()
   public empty() {
-    this.emptyMathService.entry();
+    this.mathEmptyCommandService.entry();
   }
 
   @Failure()
   public failure() {
-    this.failureMathService.entry();
+    this.mathFailureService.entry();
   }
 }

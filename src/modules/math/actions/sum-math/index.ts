@@ -1,2 +1,2 @@
-export * from './sum-math.service';
+export * from './sum-math-command.service';
 export * from './sum-math-params.dto';

@@ -1,1 +1,1 @@
-export * from './common-help.service';
+export * from './common-help-command.service';

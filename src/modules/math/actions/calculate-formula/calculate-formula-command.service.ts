@@ -4,7 +4,7 @@ import { MathApiService } from '../../services';
 import { ResultService } from '../../../../services';
 
 @injectable()
-export class CalculateFormulaService {
+export class CalculateFormulaCommandService {
   constructor(
     private readonly mathApiService: MathApiService,
     private readonly resultService: ResultService,

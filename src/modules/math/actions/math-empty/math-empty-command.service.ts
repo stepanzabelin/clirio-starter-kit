@@ -2,7 +2,7 @@ import { injectable } from 'tsyringe';
 import { ResultService } from '../../../../services';
 
 @injectable()
-export class EmptyMathService {
+export class MathEmptyCommandService {
   constructor(private readonly resultService: ResultService) {}
 
   public entry() {

@@ -37,7 +37,6 @@ export class CommonPipe implements ClirioPipe {
 
       throw new ClirioValidationError(message, {
         dataType: input.dataType,
-        propertyName: propertyName ?? 'unknown',
       });
     }
 

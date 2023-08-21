@@ -3,7 +3,7 @@ import { injectable } from 'tsyringe';
 import { ResultService } from '../../../../services';
 
 @injectable()
-export class SumMathService {
+export class SumMathCommandService {
   constructor(private readonly resultService: ResultService) {}
 
   public entry(params: SumMathParamsDto) {

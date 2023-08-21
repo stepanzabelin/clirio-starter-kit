@@ -2,7 +2,7 @@ import { injectable } from 'tsyringe';
 import { ResultService } from '../../../../services';
 
 @injectable()
-export class EmptyWeatherService {
+export class CommonEmptyCommandService {
   constructor(private readonly resultService: ResultService) {}
 
   public entry() {

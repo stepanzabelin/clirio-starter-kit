@@ -3,7 +3,7 @@ import { injectable } from 'tsyringe';
 import { ResultService } from '../../../../services';
 
 @injectable()
-export class CommonHelpService {
+export class CommonHelpCommandService {
   constructor(private readonly resultService: ResultService) {}
 
   public entry(helper: ClirioHelper) {

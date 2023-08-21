@@ -5,7 +5,7 @@ import { ResultService } from '../../../../services';
 import { ClirioCommonError } from 'clirio';
 
 @injectable()
-export class VersionHelpService {
+export class CommonVersionCommandService {
   constructor(private readonly resultService: ResultService) {}
 
   public async entry() {
