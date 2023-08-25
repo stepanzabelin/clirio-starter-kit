@@ -3,7 +3,7 @@ import { injectable } from 'tsyringe';
 import { WeatherEmptyCommandService } from './actions/weather-empty';
 import { WeatherFailureCommandService } from './actions/weather-failure';
 import {
-  GetCityWeatherCommandOptionsDto,
+  GetCityWeatherOptionsDto,
   GetCityWeatherCommandService,
 } from './actions/get-city-weather';
 
@@ -17,7 +17,7 @@ export class WeatherModule {
   ) {}
 
   @Command('get')
-  public run(@Options() options: GetCityWeatherCommandOptionsDto) {
+  public run(@Options() options: GetCityWeatherOptionsDto) {
     this.getCityWeatherCommandService.entry(options);
   }
 

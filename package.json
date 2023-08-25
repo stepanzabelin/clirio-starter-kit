@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
-    "clirio": "^1.0.0",
+    "clirio": "^1.2.0",
     "joi": "^17.9.2",
     "joi-class-decorators": "^1.1.0",
     "mathjs": "^11.8.2",
