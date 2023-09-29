@@ -1606,10 +1606,10 @@ clear-module@^4.1.2:
     parent-module "^2.0.0"
     resolve-from "^5.0.0"
 
-clirio@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/clirio/-/clirio-1.2.0.tgz#d6d1856a8c70427b4926911e9b8e964f9641b9ee"
-  integrity sha512-7NHrq8ij88/2tXrAqrs23HB2HphmXncK9sccCbdeIXhPwNLbeCbuXRMCRKJ6ObfNTzDXhOgPSH+EEUoLcv+ujg==
+clirio@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/clirio/-/clirio-2.0.0.tgz#745c3a8ca9bf083de4aece688bba10e6fd174a14"
+  integrity sha512-V7qzv2h8LzriBxEcFPXdMyfdW42g8yU8wVPfQ9le0zgoVTxX3ZzpnZx4QRy5+WkW5EEN3on7fqmzOY1L809RjQ==
   dependencies:
     reflect-metadata "^0.1.13"
 

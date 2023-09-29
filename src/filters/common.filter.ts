@@ -17,7 +17,7 @@ export class CommonFilter implements ClirioFilter {
     if (error instanceof ClirioCommonError) {
       let message;
 
-      switch (error.errCode) {
+      switch (error.code) {
         case 'INCORRECT_COMMAND':
           message = 'Incorrect command specified. Type --help';
           break;

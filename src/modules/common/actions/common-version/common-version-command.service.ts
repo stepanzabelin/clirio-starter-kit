@@ -13,7 +13,7 @@ export class CommonVersionCommandService {
 
     if (!packagePath) {
       throw new ClirioCommonError(`package.json not found`, {
-        errCode: 'BROKEN_CODE',
+        code: 'BROKEN_CODE',
       });
     }
 

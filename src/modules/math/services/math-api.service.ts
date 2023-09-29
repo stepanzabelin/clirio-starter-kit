@@ -10,7 +10,7 @@ export class MathApiService {
       return result;
     } catch (err: any) {
       throw new ClirioCommonError(`The formula has error: ${err.message}`, {
-        errCode: 'WRONG_FORMULA',
+        code: 'WRONG_FORMULA',
       });
     }
   }
