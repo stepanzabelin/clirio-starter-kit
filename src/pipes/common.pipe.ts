@@ -24,7 +24,11 @@ export class CommonPipe implements ClirioPipe {
 
       const parameter =
         propertyName &&
-        ClirioHelper.formatKeysFromPipeContext(input, propertyName);
+        ClirioHelper.getFormattedInputKey(
+          input.entity,
+          input.dataType,
+          propertyName,
+        );
 
       let message = error.message;
 
