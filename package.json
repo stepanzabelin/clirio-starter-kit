@@ -1,6 +1,6 @@
 {
   "name": "clirio-starter-kit",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "description": "A TypeScript starter-kit for a node.js command-line application based on the Clirio framework",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
-    "clirio": "^3.0.0-dev.2",
+    "clirio": "^3.0.0",
     "joi": "^17.9.2",
     "joi-class-decorators": "^1.1.0",
     "mathjs": "^11.8.2",
